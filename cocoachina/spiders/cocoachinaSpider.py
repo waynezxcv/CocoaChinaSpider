@@ -5,8 +5,6 @@ from cocoachina.items import CocoachinaItem
 import scrapy
 from scrapy.selector import Selector
 from scrapy.contrib.spiders import CrawlSpider, Rule
-from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
-from scrapy.contrib.linkextractors import LinkExtractor
 from scrapy.http import Request
 
 
@@ -34,3 +32,4 @@ class cocoachinaSpider(scrapy.Spider):
                 # yield item
             self.page = self.page + 1
             yield Request(self.url + '%s' % self.page,callback = self.parse)
+
