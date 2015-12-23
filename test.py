@@ -8,6 +8,10 @@ conn = mysql.connector.connect(host = 'rds5r1sifk46m17i665c.mysql.rds.aliyuncs.c
 cursor = conn.cursor()
 cursor.execute('select * from t_article')
 values = cursor.fetchall()
-print values
+
+for value in value:
+	contents = value["contents"]
+	for dic in contents:
+		print dic["content"]
 
 cursor.close()
