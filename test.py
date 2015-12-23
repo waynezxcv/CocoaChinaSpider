@@ -9,7 +9,7 @@ cursor = conn.cursor()
 cursor.execute('select * from t_article')
 values = cursor.fetchall()
 
-for value in value:
+for value in values:
 	contents = value["contents"]
 	for dic in contents:
 		print dic["content"]
