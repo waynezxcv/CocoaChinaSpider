@@ -13,7 +13,9 @@ BOT_NAME = 'cocoachina'
 
 SPIDER_MODULES = ['cocoachina.spiders']
 NEWSPIDER_MODULE = 'cocoachina.spiders'
-
+ITEM_PIPELINES = {
+   'cocoachina.pipelines.CocoachinaPipeline': 300,
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'cocoachina (+http://www.yourdomain.com)'

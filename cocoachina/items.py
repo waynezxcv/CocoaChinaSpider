@@ -11,5 +11,11 @@ import scrapy
 class CocoachinaItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+	articleUrl =scrapy.Field()
 	title = scrapy.Field()
-	url = scrapy.Field()
+	date = scrapy.Field()
+	editor = scrapy.Field()
+	classify = scrapy.Field()
+	source = scrapy.Field()
+	sourceUrl = scrapy.Field()
+	content = scrapy.Field()
