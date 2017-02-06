@@ -13,7 +13,7 @@ import json
 
 class CocoachinaPipeline(object):
     def __init__(self):  
-        self.conn = mysql.connector.connect(host = 'rds5r1sifk46m17i665co.mysql.rds.aliyuncs.com',port = '3306',user='waynezxcv', password='shihoujian1', database='cocoachina', use_unicode=True)
+        self.conn = mysql.connector.connect(host = 'rds5r1sifk46m17i665co.mysql.rds.aliyuncs.com',port = '3306',user='waynezxcv', password='xxxx', database='cocoachina', use_unicode=True)
         self.cursor = self.conn.cursor()
 
     def process_item(self, item, spider):  
