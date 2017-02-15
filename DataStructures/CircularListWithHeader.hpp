@@ -72,8 +72,7 @@ namespace LWTL {
             for (int i = 0; i < theIndex; i++) {
                 p = p->next;
             }
-            p->next = new ChainNode<T>(theElement, p->next);
-            
+            p->next = new ChainNode<T>(theElement,headerNode);
             ListSize ++;
         }
         
