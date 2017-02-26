@@ -24,10 +24,20 @@
  */
 
 
+#include <iostream>
+#include "ArrayStack.hpp"
+#include "LinkStack.hpp"
 
-#ifndef UseLinearList_hpp
-#define UseLinearList_hpp
 
-#include <stdio.h>
 
-#endif /* UseLinearList_hpp */
+
+
+
+
+
+int main(int argc, const char * argv[]) {
+    
+    
+    
+    return 0;
+}

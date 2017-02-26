@@ -60,6 +60,8 @@ namespace LWTL {
     template <typename T>
     class LinearList {
     public:
+        
+        
         virtual ~LinearList() {};
         virtual bool empty() const = 0;//确定线性表是否为空
         virtual int size() const = 0;//确定线性表长度

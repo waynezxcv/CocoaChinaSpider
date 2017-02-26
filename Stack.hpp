@@ -24,26 +24,51 @@
  */
 
 
-#include <iostream>
-#include "ExtendedChain.hpp"
-#include "CircularListWithHeader.hpp"
-#include "DoublelyLinkedList.hpp"
+#ifndef Stack_hpp
+#define Stack_hpp
+
+#include <stdio.h>
 
 
+/******************** 栈 *******************/
 
+/*
+ ADT
+ 创建一个线性表
+ 撤销一个线性表
+ 确定线性表是否为空
+ 确定线性表长度
+ 确定栈顶的元素
+ 入栈
+ 出栈
+ 
+ */
 
-
-
-
-
-
-
-
-using namespace LWTL;
-
-int main(int argc, const char * argv[]) {
+namespace LWTL {
     
+    //栈抽象类
     
+    template <typename T>
     
-    return 0;
+    class Stack {
+        
+    public:
+        
+        virtual ~Stack() {};
+        
+        virtual bool empty() const = 0;//判断是否为空
+        
+        virtual int size() const = 0;//获取栈的长度
+        
+        virtual T& top() const = 0;//返回栈顶的元素
+        
+        virtual void push(const T& theElement) = 0;//入栈
+        
+        virtual void pop() = 0;//出栈
+        
+    };
+    
 }
+
+
+#endif /* Stack_hpp */

@@ -82,6 +82,7 @@ namespace LWTL {
             if (theIndex < 0 || theIndex > ListSize) {
                 throw IllegalParameterValue("the index must between [0 , ListSize)");
             }
+
         }
         ChainNode<T>* headerNode;//头节点
         int ListSize;

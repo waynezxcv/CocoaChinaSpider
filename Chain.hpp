@@ -92,10 +92,12 @@ namespace LWTL {
             //链表为空
             if (ListSize == 0) {
                 firstNode = NULL;
-            } else {//需要复制每一个节点
-                //复制头节点
+            } else {
+                
+                
+                //需要复制每一个节点
                 ChainNode<T>* sourceNode = rhs.firstNode;
-                this -> firstNode = new ChainNode<T> (rhs.firstNode);
+                this -> firstNode = new ChainNode<T> (rhs.firstNode -> element);
                 sourceNode = sourceNode -> next;
                 ChainNode<T>* targetNode = this -> firstNode;
                 while (sourceNode != NULL) {

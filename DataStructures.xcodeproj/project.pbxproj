@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		017650CF1E531A16004D51DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 017650CE1E531A16004D51DB /* main.cpp */; };
 		017650D51E531A24004D51DB /* IllegalParameterValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 017650D31E531A24004D51DB /* IllegalParameterValue.cpp */; };
-		B03A56C81E54567000CEAD85 /* UseLinearList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03A56C61E54567000CEAD85 /* UseLinearList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,11 +31,11 @@
 		017650D21E531A1E004D51DB /* VectorList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VectorList.hpp; sourceTree = SOURCE_ROOT; };
 		017650D31E531A24004D51DB /* IllegalParameterValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IllegalParameterValue.cpp; sourceTree = SOURCE_ROOT; };
 		017650D41E531A24004D51DB /* IllegalParameterValue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IllegalParameterValue.hpp; sourceTree = SOURCE_ROOT; };
+		01E7DB771E63466100B33ABD /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = SOURCE_ROOT; };
+		01E7DB7A1E63496600B33ABD /* ArrayStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArrayStack.hpp; sourceTree = SOURCE_ROOT; };
+		01E7DB7D1E6356F000B33ABD /* LinkStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkStack.hpp; sourceTree = SOURCE_ROOT; };
 		B01AF7E51E519F0400715722 /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03A56C11E5455E200CEAD85 /* CircularListWithHeader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircularListWithHeader.hpp; sourceTree = SOURCE_ROOT; };
-		B03A56C41E54562100CEAD85 /* DoublelyLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DoublelyLinkedList.hpp; sourceTree = SOURCE_ROOT; };
-		B03A56C61E54567000CEAD85 /* UseLinearList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UseLinearList.cpp; sourceTree = SOURCE_ROOT; };
-		B03A56C71E54567000CEAD85 /* UseLinearList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UseLinearList.hpp; sourceTree = SOURCE_ROOT; };
 		B03A56CA1E545C3000CEAD85 /* ExtendedChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExtendedChain.hpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -61,15 +60,11 @@
 		0174FD831E54E6BD004426E5 /* Stack */ = {
 			isa = PBXGroup;
 			children = (
+				01E7DB771E63466100B33ABD /* Stack.hpp */,
+				01E7DB7A1E63496600B33ABD /* ArrayStack.hpp */,
+				01E7DB7D1E6356F000B33ABD /* LinkStack.hpp */,
 			);
 			name = Stack;
-			sourceTree = "<group>";
-		};
-		0174FD841E54E6BF004426E5 /* Array&Matrix */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Array&Matrix";
 			sourceTree = "<group>";
 		};
 		B01AF7DC1E519F0400715722 = {
@@ -93,7 +88,6 @@
 			children = (
 				017650CE1E531A16004D51DB /* main.cpp */,
 				B057234B1E531394003B3465 /* LinearList */,
-				0174FD841E54E6BF004426E5 /* Array&Matrix */,
 				0174FD831E54E6BD004426E5 /* Stack */,
 				0174FD821E54E6B9004426E5 /* Queue */,
 				B057234C1E5313AF003B3465 /* Commons */,
@@ -110,9 +104,6 @@
 				017650D11E531A1E004D51DB /* Chain.hpp */,
 				B03A56CA1E545C3000CEAD85 /* ExtendedChain.hpp */,
 				B03A56C11E5455E200CEAD85 /* CircularListWithHeader.hpp */,
-				B03A56C41E54562100CEAD85 /* DoublelyLinkedList.hpp */,
-				B03A56C61E54567000CEAD85 /* UseLinearList.cpp */,
-				B03A56C71E54567000CEAD85 /* UseLinearList.hpp */,
 			);
 			name = LinearList;
 			sourceTree = "<group>";
@@ -184,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				017650D51E531A24004D51DB /* IllegalParameterValue.cpp in Sources */,
-				B03A56C81E54567000CEAD85 /* UseLinearList.cpp in Sources */,
 				017650CF1E531A16004D51DB /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
