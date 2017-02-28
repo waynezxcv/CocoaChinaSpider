@@ -23,52 +23,39 @@
  THE SOFTWARE.
  */
 
-
-#ifndef Stack_hpp
-#define Stack_hpp
-
-#include <stdio.h>
+#include "TowersOfHanoi.hpp"
 
 
-/******************** 栈 *******************/
+using namespace LWTL;
 
-/*
- ADT
- 创建一个栈
- 撤销一个栈
- 确定栈是否为空
- 确定栈长度
- 确定栈顶的元素
- 入栈
- 出栈
- 
- */
 
-namespace LWTL {
-    
-    //栈抽象类
-    
-    template <typename T>
-    
-    class Stack {
-        
-    public:
-        
-        virtual ~Stack() {};
-        
-        virtual bool empty() const = 0;//判断是否为空
-        
-        virtual int size() const = 0;//获取栈的长度
-        
-        virtual T& top() const = 0;//返回栈顶的元素
-        
-        virtual void push(const T& theElement) = 0;//入栈
-        
-        virtual void pop() = 0;//出栈
-        
-    };
-    
+void TowersOfHanoi::start() {
+    move(count, 1, 2, 3);
 }
 
 
-#endif /* Stack_hpp */
+void TowersOfHanoi::move(int n, int x, int y, int z) {
+    
+    if (n > 0) {
+        move(n-1, x, z, y);
+        int d = towers[x].top();
+        towers[x].pop();
+        towers[y].push(d);
+        move(n-1, z, y, x);
+        
+    }
+}
+
+void TowersOfHanoi::show() {
+    ArrayStack<int> tower1 = towers[1];
+    printf("tower1 :\n");
+    tower1.show();
+    
+    ArrayStack<int> tower2 = towers[2];
+    printf("tower2 :\n");
+    tower2.show();
+    
+    ArrayStack<int> tower3 = towers[3];
+    printf("tower3 :\n");
+    tower3.show();
+}

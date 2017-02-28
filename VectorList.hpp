@@ -136,10 +136,6 @@ namespace LWTL {
             elements -> insert(begin() + index,element);
         }
         
-        //把线性表插入输出流
-        void output(std::ostream& out) const override {
-            
-        }
         
     protected:
         void checkList (const int& theIndex ) const {

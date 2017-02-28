@@ -220,17 +220,6 @@ namespace LWTL {
             }
         }
 
-        //把线性表插入输出流
-        void output(std::ostream& out) const override {
-
-        }
-
-        //重载<<运算符
-        //        std::ostream& operator << (std::ostream& out,const ArrayList<T>& x) {
-        //            x.output(out);
-        //            return out;
-        //        }
-
     protected:
 
         T* elements;//存储线性表的数组

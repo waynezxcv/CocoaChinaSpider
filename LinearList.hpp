@@ -69,7 +69,6 @@ namespace LWTL {
         virtual int indexOf(const T& element) const = 0;//按一个给定的元素查找他的索引
         virtual void erase(const int& index) = 0;//按一个给定索引删除一个元素
         virtual void insert( const int& index,const T& element) = 0;//按一个给定索引插入一个元素
-        virtual void output(std::ostream& out) const = 0;//把线性表插入输出流
     };
 
 

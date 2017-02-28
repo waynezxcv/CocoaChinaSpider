@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		017650CF1E531A16004D51DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 017650CE1E531A16004D51DB /* main.cpp */; };
 		017650D51E531A24004D51DB /* IllegalParameterValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 017650D31E531A24004D51DB /* IllegalParameterValue.cpp */; };
+		01E7DB811E65BAFE00B33ABD /* TowersOfHanoi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01E7DB7F1E65BAFE00B33ABD /* TowersOfHanoi.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,12 @@
 		01E7DB771E63466100B33ABD /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB7A1E63496600B33ABD /* ArrayStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArrayStack.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB7D1E6356F000B33ABD /* LinkStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkStack.hpp; sourceTree = SOURCE_ROOT; };
+		01E7DB7F1E65BAFE00B33ABD /* TowersOfHanoi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowersOfHanoi.cpp; sourceTree = SOURCE_ROOT; };
+		01E7DB801E65BAFE00B33ABD /* TowersOfHanoi.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TowersOfHanoi.hpp; sourceTree = SOURCE_ROOT; };
+		01E7DB831E65CA5B00B33ABD /* Queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = SOURCE_ROOT; };
+		01E7DB861E65CB9F00B33ABD /* ArrayQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArrayQueue.hpp; sourceTree = SOURCE_ROOT; };
+		01E7DB891E65D26400B33ABD /* LinkQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkQueue.hpp; sourceTree = SOURCE_ROOT; };
+		01E7DB8C1E65D31F00B33ABD /* CircularArrayQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircularArrayQueue.hpp; sourceTree = SOURCE_ROOT; };
 		B01AF7E51E519F0400715722 /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03A56C11E5455E200CEAD85 /* CircularListWithHeader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircularListWithHeader.hpp; sourceTree = SOURCE_ROOT; };
 		B03A56CA1E545C3000CEAD85 /* ExtendedChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExtendedChain.hpp; sourceTree = SOURCE_ROOT; };
@@ -53,6 +60,10 @@
 		0174FD821E54E6B9004426E5 /* Queue */ = {
 			isa = PBXGroup;
 			children = (
+				01E7DB831E65CA5B00B33ABD /* Queue.hpp */,
+				01E7DB861E65CB9F00B33ABD /* ArrayQueue.hpp */,
+				01E7DB8C1E65D31F00B33ABD /* CircularArrayQueue.hpp */,
+				01E7DB891E65D26400B33ABD /* LinkQueue.hpp */,
 			);
 			name = Queue;
 			sourceTree = "<group>";
@@ -63,6 +74,8 @@
 				01E7DB771E63466100B33ABD /* Stack.hpp */,
 				01E7DB7A1E63496600B33ABD /* ArrayStack.hpp */,
 				01E7DB7D1E6356F000B33ABD /* LinkStack.hpp */,
+				01E7DB7F1E65BAFE00B33ABD /* TowersOfHanoi.cpp */,
+				01E7DB801E65BAFE00B33ABD /* TowersOfHanoi.hpp */,
 			);
 			name = Stack;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				017650D51E531A24004D51DB /* IllegalParameterValue.cpp in Sources */,
+				01E7DB811E65BAFE00B33ABD /* TowersOfHanoi.cpp in Sources */,
 				017650CF1E531A16004D51DB /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

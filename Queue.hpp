@@ -24,51 +24,50 @@
  */
 
 
-#ifndef Stack_hpp
-#define Stack_hpp
+#ifndef Queue_hpp
+#define Queue_hpp
 
 #include <stdio.h>
 
 
-/******************** 栈 *******************/
+/******************** 队列 *******************/
 
 /*
  ADT
- 创建一个栈
- 撤销一个栈
- 确定栈是否为空
- 确定栈长度
- 确定栈顶的元素
- 入栈
- 出栈
- 
+ 创建一个队列
+ 撤销一个队列
+ 确定队列是否为空
+ 确定队列长度
+ 确定队首的元素front
+ 确定队尾的元素back
+ 添加一个元素到队列队尾
+ 从队列队首删除一个元素
  */
+
+
+
 
 namespace LWTL {
     
-    //栈抽象类
-    
     template <typename T>
     
-    class Stack {
-        
+    class Queue {
     public:
         
-        virtual ~Stack() {};
+        virtual ~Queue() {};
         
-        virtual bool empty() const = 0;//判断是否为空
+        virtual bool empty() const = 0;
         
-        virtual int size() const = 0;//获取栈的长度
+        virtual int size() const = 0;
         
-        virtual T& top() const = 0;//返回栈顶的元素
+        virtual T& front() const = 0;
         
-        virtual void push(const T& theElement) = 0;//入栈
+        virtual T& back() const = 0;
         
-        virtual void pop() = 0;//出栈
+        virtual void push(const T& t) = 0;
         
+        virtual void pop() = 0;
     };
-    
 }
 
-
-#endif /* Stack_hpp */
+#endif /* Queue_hpp */

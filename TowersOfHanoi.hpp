@@ -24,51 +24,35 @@
  */
 
 
-#ifndef Stack_hpp
-#define Stack_hpp
+#ifndef TowersOfHanoi_hpp
+#define TowersOfHanoi_hpp
 
 #include <stdio.h>
+#include "ArrayStack.hpp"
 
-
-/******************** 栈 *******************/
-
-/*
- ADT
- 创建一个栈
- 撤销一个栈
- 确定栈是否为空
- 确定栈长度
- 确定栈顶的元素
- 入栈
- 出栈
- 
- */
 
 namespace LWTL {
     
-    //栈抽象类
     
-    template <typename T>
-    
-    class Stack {
-        
+    class TowersOfHanoi {
     public:
         
-        virtual ~Stack() {};
+        TowersOfHanoi(int n) : count(n) {
+            for (int d = count; d > 0; d --) {
+                towers[1].push(d);
+            }
+        };
         
-        virtual bool empty() const = 0;//判断是否为空
+        void start();
+        void move(int ,int ,int ,int);
+        void show();
         
-        virtual int size() const = 0;//获取栈的长度
-        
-        virtual T& top() const = 0;//返回栈顶的元素
-        
-        virtual void push(const T& theElement) = 0;//入栈
-        
-        virtual void pop() = 0;//出栈
-        
+    private:
+        ArrayStack<int> towers [4];
+        int count;
     };
     
 }
 
 
-#endif /* Stack_hpp */
+#endif /* TowersOfHanoi_hpp */

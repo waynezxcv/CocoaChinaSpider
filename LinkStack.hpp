@@ -57,6 +57,8 @@ namespace LWTL {
     };
     
     
+    
+    
     template <typename T>
     class LinkStack : public Stack<T> {
         

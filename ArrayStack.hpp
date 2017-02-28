@@ -53,7 +53,6 @@ namespace LWTL {
         
         //拷贝构造函数
         ArrayStack(const ArrayStack& rhs) {
-            printf("test2\n");
             arrayLength = rhs.arrayLength;
             stackTop = rhs.stackTop;
             elements = new T [arrayLength];
@@ -63,7 +62,6 @@ namespace LWTL {
         
         //拷贝赋值运算符
         ArrayStack& operator = (const ArrayStack& rhs) {
-            printf("test1\n");
             if (this == &rhs) {
                 return *this;
             }
@@ -115,7 +113,6 @@ namespace LWTL {
         
         //出栈
         void pop () override {
-            
             if (stackTop == -1) {
                 throw IllegalParameterValue("the stack is empty");
             }
@@ -131,6 +128,14 @@ namespace LWTL {
             
             elements[stackTop].~T();//调用栈顶元素的析构函数
             stackTop --;
+        }
+        
+        
+        void show(){
+            for (int i = stackTop; i >= 0; i --) {
+                T element = elements[i];
+                std::cout<<"index"<<i<<":"<<element<<std::endl;
+            }
         }
         
     private:
