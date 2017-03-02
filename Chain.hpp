@@ -93,8 +93,6 @@ namespace LWTL {
             if (ListSize == 0) {
                 firstNode = NULL;
             } else {
-                
-                
                 //需要复制每一个节点
                 ChainNode<T>* sourceNode = rhs.firstNode;
                 this -> firstNode = new ChainNode<T> (rhs.firstNode -> element);
@@ -120,7 +118,16 @@ namespace LWTL {
             if (this == &rhs) {
                 return *this;
             }
+            
+            while (firstNode != NULL) {
+                //清除首节点
+                ChainNode<T>* nextNode = firstNode -> next;
+                delete firstNode;
+                firstNode = nextNode;
+            }
+            
             ListSize = rhs.ListSize;
+            
             //链表为空
             if (ListSize == 0) {
                 firstNode = NULL;

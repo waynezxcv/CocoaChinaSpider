@@ -52,7 +52,7 @@ namespace LWTL {
         }
         
         //拷贝构造函数
-        ArrayStack(const ArrayStack& rhs) {
+        ArrayStack(const ArrayStack<T>& rhs) {
             arrayLength = rhs.arrayLength;
             stackTop = rhs.stackTop;
             elements = new T [arrayLength];
@@ -61,12 +61,16 @@ namespace LWTL {
         
         
         //拷贝赋值运算符
-        ArrayStack& operator = (const ArrayStack& rhs) {
+        ArrayStack& operator = (const ArrayStack<T>& rhs) {
             if (this == &rhs) {
                 return *this;
             }
+            
             arrayLength = rhs.arrayLength;
             stackTop = rhs.stackTop;
+            
+            delete [] elements;
+            
             elements = new T [arrayLength];
             memcpy(elements, rhs.elements, sizeof(T) * arrayLength);
             return *this;

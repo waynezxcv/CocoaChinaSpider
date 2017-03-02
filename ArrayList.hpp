@@ -129,20 +129,20 @@ namespace LWTL {
             memcpy(elements, rhs.elements, ListSize *  sizeof(T));
         }
 
-
         //重载拷贝赋值运算符
         ArrayList& operator = (const ArrayList<T>& rhs) {
-            if (this == &rhs) {
-                return *this;
+            if (this != &rhs) {
+                ArrayList<T> tmp (rhs);
+                T* tmpElements = tmp.elements;
+                tmp.elements = elements;
+                elements = tmpElements;
+                arrayLength = tmp.arrayLength;
+                ListSize = tmp.ListSize;
             }
-            arrayLength = rhs.arrayLength;
-            ListSize = rhs.ListSize;
-            delete [] elements;
-            elements = new T [arrayLength];
-            memcpy(elements, rhs.elements, ListSize *  sizeof(T));
             return *this;
         }
 
+        
         //析构函数
         ~ArrayList() override {
             delete [] elements;

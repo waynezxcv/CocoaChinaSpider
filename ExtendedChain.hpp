@@ -53,7 +53,6 @@ namespace LWTL {
             if (this == &rhs) {
                 return this;
             }
-            
             //调用父类的拷贝赋值运算符
             Chain<T>::operator = (rhs);
             lastNode = rhs.lastNode;

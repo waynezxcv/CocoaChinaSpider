@@ -57,12 +57,43 @@ namespace LWTL {
             memcpy(elements, rhs.elements, sizeof(T) * rhs.arrayLength);
         }
         
-        ArrayQueue& operator = (const ArrayQueue& rhs) {
-            arrayLength = rhs.arrayLength;
-            queueSize = rhs.queueSize;
-            elements = new T [arrayLength];
-            memset(elements, 0, sizeof(T) * arrayLength);
-            memcpy(elements, rhs.elements, sizeof(T) * arrayLength);
+        
+        ArrayQueue& operator = (const ArrayQueue<T>& rhs) {
+            if (this != &rhs) {
+                //先创建一个临时实例，再交换原来的实例和临时实例。防止因内存不足时new失败异常
+                ArrayQueue<T> tmpQueue (rhs);
+                
+                T* elementsTmp = tmpQueue.elements;
+                int arrayLengthTmp = tmpQueue.arrayLength;
+                int queueSizeTmp = tmpQueue.queueSize;
+                
+                
+                tmpQueue.elements = elements;
+                tmpQueue.arrayLength = arrayLength;
+                tmpQueue.queueSize = queueSize;
+                
+                
+                elements = elementsTmp;
+                arrayLength = arrayLengthTmp;
+                queueSize = queueSizeTmp;
+            }
+            return *this;
+            //
+            //            if (this == &rhs) {
+            //                return *this;
+            //            }
+            //
+            //            delete [] elements;
+            //            elements = NULL;
+            //
+            //            arrayLength = rhs.arrayLength;
+            //            queueSize = rhs.queueSize;
+            //
+            //            elements = new T [arrayLength];
+            //            memset(elements, 0, sizeof(T) * arrayLength);
+            //            memcpy(elements, rhs.elements, sizeof(T) * arrayLength);
+            //
+            //            return *this;
         }
         
         ~ArrayQueue() {

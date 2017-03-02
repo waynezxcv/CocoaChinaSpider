@@ -84,9 +84,18 @@ namespace LWTL {
         
         //重载拷贝赋值运算符
         LinkStack& operator = (const LinkStack<T>& rhs) {
+            
             if (this == &rhs) {
                 return *this;
             }
+            
+            //遍历依次delete
+            while (stackTop != NULL) {
+                StackNode<T>* node = stackTop;
+                stackTop = stackTop -> next;
+                delete node;
+            }
+            
             
             stackSize = rhs.stackSize;
             //遍历依次拷贝
@@ -105,7 +114,7 @@ namespace LWTL {
         
         //析构函数
         ~LinkStack() {
-            //遍历一次delete
+            //遍历依次delete
             while (stackTop != NULL) {
                 StackNode<T>* node = stackTop;
                 stackTop = stackTop -> next;
