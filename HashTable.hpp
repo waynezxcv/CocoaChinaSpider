@@ -86,7 +86,8 @@ namespace LWTL {
                     return j;
                 }
                 j = (j + 1) % divisor;
-            }while (j != i);
+                
+            } while (j != i);
             return j;
         }
         

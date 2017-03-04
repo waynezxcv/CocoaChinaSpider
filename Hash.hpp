@@ -41,6 +41,7 @@ namespace LWTL {
     class Hash;
     
     
+    //模板特例化
     template<>
     class Hash<string> {
     public:
