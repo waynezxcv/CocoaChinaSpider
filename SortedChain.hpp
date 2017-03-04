@@ -50,10 +50,6 @@ namespace LWTL {
             chainSize = 0;
         }
         
-        SortedChain(int capacity = 10) {
-            firstNode = NULL;
-            chainSize = 0;
-        }
         
         SortedChain(const SortedChain& rhs) {
             chainSize = rhs.chainSize;
@@ -128,18 +124,20 @@ namespace LWTL {
             while (currentNode != NULL && currentNode-> element.first != theKey) {
                 currentNode = currentNode -> next;
             }
+            
+            
             if (currentNode != NULL && currentNode -> element.first == theKey) {
-                return currentNode->element;
+                return &(currentNode -> element);
             }
             return NULL;
         }
         
         
-        void insert(const pair<K, E>& thePair) override {
+        void insert(const pair<const K,E>& thePair) override {
             //往字典中插入pair，如果key已经存在就覆盖。
             //1.先查找
             PairNode<K, E>* currentNode = firstNode;
-            PairNode<K, E>* nodeTrails ;//遍历时currentNode的前一个结点
+            PairNode<K, E>* nodeTrails = NULL ;//遍历时currentNode的前一个结点
             
             while (currentNode != NULL && currentNode -> element.first < thePair.first) {
                 nodeTrails = currentNode;
@@ -167,7 +165,7 @@ namespace LWTL {
         void erase(const K& theKey) override {
             
             PairNode<K, E>* currentNode = firstNode;
-            PairNode<K, E>* nodeTrails;
+            PairNode<K, E>* nodeTrails = nullptr;
             
             while (currentNode != NULL && currentNode -> element.first < theKey) {
                 nodeTrails = currentNode;

@@ -32,6 +32,8 @@
 		017650D31E531A24004D51DB /* IllegalParameterValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IllegalParameterValue.cpp; sourceTree = SOURCE_ROOT; };
 		017650D41E531A24004D51DB /* IllegalParameterValue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IllegalParameterValue.hpp; sourceTree = SOURCE_ROOT; };
 		0177E4E61E6B19FF007D638C /* SortedChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SortedChain.hpp; sourceTree = SOURCE_ROOT; };
+		0177E4ED1E6B5D41007D638C /* Hash.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Hash.hpp; sourceTree = SOURCE_ROOT; };
+		0177E4F01E6B6AE8007D638C /* HashChains.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashChains.hpp; sourceTree = SOURCE_ROOT; };
 		018821921E6A644B005DC597 /* Dictionary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dictionary.hpp; sourceTree = SOURCE_ROOT; };
 		0188219C1E6A6BF6005DC597 /* HashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = SOURCE_ROOT; };
 		0188219F1E6A9024005DC597 /* PairNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PairNode.hpp; sourceTree = SOURCE_ROOT; };
@@ -96,7 +98,9 @@
 				018821921E6A644B005DC597 /* Dictionary.hpp */,
 				0188219F1E6A9024005DC597 /* PairNode.hpp */,
 				0177E4E61E6B19FF007D638C /* SortedChain.hpp */,
+				0177E4ED1E6B5D41007D638C /* Hash.hpp */,
 				0188219C1E6A6BF6005DC597 /* HashTable.hpp */,
+				0177E4F01E6B6AE8007D638C /* HashChains.hpp */,
 			);
 			name = Dictionary;
 			path = ..;

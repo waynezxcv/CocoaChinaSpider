@@ -50,6 +50,7 @@ namespace LWTL {
     template <typename K,typename E>
     
     class Dictionary {
+    public:
         
         virtual ~Dictionary() {};
         

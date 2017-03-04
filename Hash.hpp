@@ -24,22 +24,60 @@
  */
 
 
-#include <iostream>
-#include "HashTable.hpp"
-#include "HashChains.hpp"
 
 
+
+#ifndef Hash_hpp
+#define Hash_hpp
+
+#include <stdio.h>
 
 
 using namespace std;
 
-
-
-int main(int argc, const char * argv[]) {
+namespace LWTL {
+    
+    template <typename K>
+    class Hash;
+    
+    
+    template<>
+    class Hash<string> {
+    public:
+        //重载函数调用运算符
+        size_t operator () (const string& theKey) const {
+            //将字符串转化为一个非负整数
+            unsigned long hashValue = 0;
+            int length = (int)theKey.length();
+            
+            for (int i = 0; i < length; i ++) {
+                hashValue = 5 * hashValue + theKey.at(i);
+            }
+            return size_t(hashValue);
+        }
+    };
     
     
     
+    template<>
+    class Hash<int> {
+    public:
+        size_t operator () (const int& theKey) const {
+            return size_t(theKey);
+        }
+    };
     
     
-    return 0;
+    
+    template<>
+    class Hash<long> {
+    public:
+        size_t operator () (const long& theKey) const {
+            return size_t(theKey);
+        }
+    };
+    
+    
 }
+
+#endif /* Hash_hpp */
