@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		017650CF1E531A16004D51DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 017650CE1E531A16004D51DB /* main.cpp */; };
-		017650D51E531A24004D51DB /* IllegalParameterValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 017650D31E531A24004D51DB /* IllegalParameterValue.cpp */; };
 		01E7DB811E65BAFE00B33ABD /* TowersOfHanoi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01E7DB7F1E65BAFE00B33ABD /* TowersOfHanoi.cpp */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +31,10 @@
 		017650D21E531A1E004D51DB /* VectorList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VectorList.hpp; sourceTree = SOURCE_ROOT; };
 		017650D31E531A24004D51DB /* IllegalParameterValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IllegalParameterValue.cpp; sourceTree = SOURCE_ROOT; };
 		017650D41E531A24004D51DB /* IllegalParameterValue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IllegalParameterValue.hpp; sourceTree = SOURCE_ROOT; };
+		0177E4E61E6B19FF007D638C /* SortedChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SortedChain.hpp; sourceTree = SOURCE_ROOT; };
+		018821921E6A644B005DC597 /* Dictionary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dictionary.hpp; sourceTree = SOURCE_ROOT; };
+		0188219C1E6A6BF6005DC597 /* HashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = SOURCE_ROOT; };
+		0188219F1E6A9024005DC597 /* PairNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PairNode.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB771E63466100B33ABD /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB7A1E63496600B33ABD /* ArrayStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArrayStack.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB7D1E6356F000B33ABD /* LinkStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkStack.hpp; sourceTree = SOURCE_ROOT; };
@@ -80,6 +83,25 @@
 			name = Stack;
 			sourceTree = "<group>";
 		};
+		0177E4EB1E6B36D6007D638C /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tree;
+			sourceTree = "<group>";
+		};
+		018821941E6A6A87005DC597 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				018821921E6A644B005DC597 /* Dictionary.hpp */,
+				0188219F1E6A9024005DC597 /* PairNode.hpp */,
+				0177E4E61E6B19FF007D638C /* SortedChain.hpp */,
+				0188219C1E6A6BF6005DC597 /* HashTable.hpp */,
+			);
+			name = Dictionary;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		B01AF7DC1E519F0400715722 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +125,8 @@
 				B057234B1E531394003B3465 /* LinearList */,
 				0174FD831E54E6BD004426E5 /* Stack */,
 				0174FD821E54E6B9004426E5 /* Queue */,
+				018821941E6A6A87005DC597 /* Dictionary */,
+				0177E4EB1E6B36D6007D638C /* Tree */,
 				B057234C1E5313AF003B3465 /* Commons */,
 			);
 			path = DataStructures;
@@ -187,7 +211,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017650D51E531A24004D51DB /* IllegalParameterValue.cpp in Sources */,
 				01E7DB811E65BAFE00B33ABD /* TowersOfHanoi.cpp in Sources */,
 				017650CF1E531A16004D51DB /* main.cpp in Sources */,
 			);

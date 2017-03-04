@@ -148,6 +148,7 @@ namespace LWTL {
         }
         
     private:
+        
         T* elements;
         int queueSize;
         int arrayLength;

@@ -24,6 +24,9 @@
  */
 
 
+
+
+
 #ifndef TowersOfHanoi_hpp
 #define TowersOfHanoi_hpp
 
@@ -32,7 +35,6 @@
 
 
 namespace LWTL {
-    
     
     class TowersOfHanoi {
     public:

@@ -117,6 +117,7 @@ namespace LWTL {
         
         //出栈
         void pop () override {
+            
             if (stackTop == -1) {
                 throw IllegalParameterValue("the stack is empty");
             }
