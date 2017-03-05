@@ -24,25 +24,53 @@
  */
 
 
-#include <iostream>
-#include "MaxPriorityQueue.hpp"
 
 
 
+#ifndef MaxPriorityQueue_hpp
+#define MaxPriorityQueue_hpp
+
+#include <stdio.h>
 
 
 
+/******************** 最大优先级队列 *******************/
+
+//查找和删除元素都是优先级最大的元素
 
 
-using namespace std;
+/*
+ ADT
+ 
+ 确定队列是否为空
+ 确定队列元素个数
+ 返回优先级最大的元素
+ 删除优先级最大的元素
+ 插入元素
+ 
+ */
 
 
-
-int main(int argc, const char * argv[]) {
+namespace LWTL {
+    
+    template <typename T>
+    class MaxPriorityQueue {
+        
+        virtual ~MaxPriorityQueue() {};
+        
+        virtual bool empty() const = 0;
+        
+        virtual int size() const = 0;
+        
+        virtual T& pop() = 0;
+        
+        virtual void erase() = 0;
+        
+        virtual void push(const T& theElement) = 0;
+        
+    };
     
     
-    
-    
-    
-    return 0;
 }
+
+#endif /* MaxPriorityQueue_hpp */

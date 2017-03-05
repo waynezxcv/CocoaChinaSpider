@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0119A3B91E6C8106006B0B27 /* MaxHeap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MaxHeap.hpp; sourceTree = SOURCE_ROOT; };
 		0156641C1E5383F900FE6BE4 /* ArrayList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayList.hpp; sourceTree = SOURCE_ROOT; };
 		017650CE1E531A16004D51DB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
 		017650D01E531A1E004D51DB /* LinearList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearList.hpp; sourceTree = SOURCE_ROOT; };
@@ -40,6 +41,7 @@
 		0198379F1E6BFD850055757C /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = SOURCE_ROOT; };
 		019837A21E6C03BB0055757C /* BinaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinaryTree.hpp; sourceTree = SOURCE_ROOT; };
 		019837A51E6C03C70055757C /* LinkedBinaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkedBinaryTree.hpp; sourceTree = SOURCE_ROOT; };
+		019837AC1E6C11A00055757C /* MaxPriorityQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MaxPriorityQueue.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB771E63466100B33ABD /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB7A1E63496600B33ABD /* ArrayStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArrayStack.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB7D1E6356F000B33ABD /* LinkStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkStack.hpp; sourceTree = SOURCE_ROOT; };
@@ -88,14 +90,14 @@
 			name = Stack;
 			sourceTree = "<group>";
 		};
-		0177E4EB1E6B36D6007D638C /* Tree */ = {
+		0177E4EB1E6B36D6007D638C /* BinaryTree */ = {
 			isa = PBXGroup;
 			children = (
 				019837A21E6C03BB0055757C /* BinaryTree.hpp */,
 				0198379F1E6BFD850055757C /* BinaryTreeNode.hpp */,
 				019837A51E6C03C70055757C /* LinkedBinaryTree.hpp */,
 			);
-			name = Tree;
+			name = BinaryTree;
 			sourceTree = "<group>";
 		};
 		018821941E6A6A87005DC597 /* Dictionary */ = {
@@ -109,6 +111,39 @@
 				0177E4F01E6B6AE8007D638C /* HashChains.hpp */,
 			);
 			name = Dictionary;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		019837A71E6C08DF0055757C /* PriorytyQueue */ = {
+			isa = PBXGroup;
+			children = (
+				019837AC1E6C11A00055757C /* MaxPriorityQueue.hpp */,
+				0119A3B91E6C8106006B0B27 /* MaxHeap.hpp */,
+			);
+			name = PriorytyQueue;
+			sourceTree = "<group>";
+		};
+		019837A81E6C08EE0055757C /* TournamentTree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TournamentTree;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		019837A91E6C08FD0055757C /* SerachTree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SerachTree;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		019837AA1E6C09310055757C /* BalancedTree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BalancedTree;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -136,7 +171,11 @@
 				0174FD831E54E6BD004426E5 /* Stack */,
 				0174FD821E54E6B9004426E5 /* Queue */,
 				018821941E6A6A87005DC597 /* Dictionary */,
-				0177E4EB1E6B36D6007D638C /* Tree */,
+				0177E4EB1E6B36D6007D638C /* BinaryTree */,
+				019837A71E6C08DF0055757C /* PriorytyQueue */,
+				019837A81E6C08EE0055757C /* TournamentTree */,
+				019837A91E6C08FD0055757C /* SerachTree */,
+				019837AA1E6C09310055757C /* BalancedTree */,
 				B057234C1E5313AF003B3465 /* Commons */,
 			);
 			path = DataStructures;
