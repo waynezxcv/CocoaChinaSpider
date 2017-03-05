@@ -24,24 +24,47 @@
  */
 
 
-#include <iostream>
-#include "LinkedBinaryTree.hpp"
 
+#ifndef BinaryTreeNode_hpp
+#define BinaryTreeNode_hpp
 
+#include <stdio.h>
 
-
-
-
-
-using namespace std;
-
-
-
-int main(int argc, const char * argv[]) {
+namespace LWTL {
     
     
+    /******************** 用链表描述二叉树的元素结点 *******************/
     
     
+    template<typename T>
+    class BinaryTreeNode {
+    public:
+        
+        BinaryTreeNode () {
+            leftChild = rightChild = NULL;
+        }
+        
+        BinaryTreeNode(const T& theElement) {
+            leftChild = rightChild = NULL;
+            element = theElement;
+        }
+        
+        BinaryTreeNode(const T& theElement,BinaryTreeNode<T>* theLeft,BinaryTreeNode<T>* theRight) {
+            element = theElement;
+            leftChild = theLeft;
+            rightChild = theRight;
+        }
+        
+        ~BinaryTreeNode() {
+            
+        }
+        
+        BinaryTreeNode<T>* leftChild;//左孩子
+        BinaryTreeNode<T>* rightChild;//右孩子
+        T element;//数据域
+    };
     
-    return 0;
 }
+
+#endif /* BinaryTreeNode_hpp */
+

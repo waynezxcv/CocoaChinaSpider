@@ -49,7 +49,6 @@ namespace LWTL {
         
         HashChains(const int& theDivisor) : divisor(theDivisor) {
             dSize = 0;
-            
             new SortedChain<K, E> [divisor];
             table = new SortedChain<K, E> [divisor];
         }
@@ -60,7 +59,8 @@ namespace LWTL {
         
         
         pair<const K, E>* find (const K& theKey) const override {
-            return table[hash(theKey) % divisor].find(theKey);//先根据theKey的哈希函数找到桶，再调用起始桶sortedChain的find();
+            //先根据theKey的哈希函数找到桶，再调用起始桶sortedChain的find();
+            return table[hash(theKey) % divisor].find(theKey);
         }
         
         

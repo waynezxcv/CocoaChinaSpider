@@ -37,8 +37,10 @@ using namespace std;
 
 namespace LWTL {
     
+    
     template <typename K>
     class Hash;
+
     
     
     //模板特例化

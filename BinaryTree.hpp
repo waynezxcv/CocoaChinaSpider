@@ -24,24 +24,58 @@
  */
 
 
-#include <iostream>
-#include "LinkedBinaryTree.hpp"
+#ifndef BinaryTree_hpp
+#define BinaryTree_hpp
+
+#include <stdio.h>
 
 
 
 
+/******************** 二叉树 *******************/
+
+/*
+ ADT
+ 
+ 确定二叉树是否为空
+ 确定二叉树元素个数
+ 前序遍历二叉树
+ 中序遍历二叉树
+ 后序遍历二叉树
+ 层次遍历二叉树
+ 
+ */
 
 
 
-using namespace std;
-
-
-
-int main(int argc, const char * argv[]) {
+namespace LWTL {
     
+    template <typename T>
+    class BinaryTree {
+    public:
+        
+        virtual ~BinaryTree () {};
+        
+        virtual bool empty () const = 0;
+        
+        virtual int size () const = 0;
+        
+        // 前序遍历二叉树
+        
+        virtual void preOrder(void (*) (T*)) = 0;
+        
+        
+        //中序遍历二叉树
+        virtual void inOrder (void (*) (T*)) = 0;
+        
+        //后序遍历二叉树
+        virtual void postOrder (void (*) (T*)) = 0;
+        
+        //层次遍历二叉树
+        virtual void levelOrder (void (*) (T*)) = 0;
+        
+    };
     
-    
-    
-    
-    return 0;
 }
+
+#endif /* BinaryTree_hpp */

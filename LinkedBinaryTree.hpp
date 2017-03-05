@@ -24,24 +24,33 @@
  */
 
 
-#include <iostream>
-#include "LinkedBinaryTree.hpp"
 
 
 
+#ifndef LinkedBinaryTree_hpp
+#define LinkedBinaryTree_hpp
+
+#include "BinaryTree.hpp"
+#include "BinaryTreeNode.hpp"
 
 
 
+/******************** 用链表描述二叉树 *******************/
 
-using namespace std;
-
-
-
-int main(int argc, const char * argv[]) {
+namespace LWTL {
+    
+    template <typename T>
+    class LinkedBinaryTree : public BinaryTree<T> {
+    public:
+        
+        
+        
+    private:
+        
+    };
     
     
-    
-    
-    
-    return 0;
 }
+
+
+#endif /* LinkedBinaryTree_hpp */
