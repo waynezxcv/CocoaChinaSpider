@@ -79,7 +79,7 @@ namespace LWTL {
         
         
         void push (const T& theElement) override {
-            //如果需要的话，扩展数组的控件
+            //如果需要的话，扩展数组的空间
             if (heapSize + 1 == arrayLength) {
                 T* tmp = new T [arrayLength * 2];
                 memset(tmp, 0, sizeof(T) * arrayLength * 2);

@@ -23,19 +23,51 @@
  THE SOFTWARE.
  */
 
+#ifndef ReverseLinkList_hpp
+#define ReverseLinkList_hpp
 
-#include <iostream>
-
-
-
-
-
-using namespace std;
+#include <stdio.h>
 
 
 
-int main(int argc, const char * argv[]) {
+
+
+namespace LWTL {
+    
+    template <typename T>
+    struct LinkNode {
+        T element;
+        LinkNode* next;
+        LinkNode(const T& theElement) : element(theElement) {
+            next = NULL;
+        }
+    };
     
     
-    return 0;
+    //反转一个单链表
+    template <typename T>
+    LinkNode<T>* reverseLinkList (LinkNode<T>* theList) {
+        
+        if (theList == NULL) {
+            return NULL;
+        }
+        
+        LinkNode<T>* currentNode = theList;
+        LinkNode<T>* reverseLink = new LinkNode<T> (currentNode -> element);
+        
+        while (currentNode -> next != NULL) {
+            currentNode = currentNode -> next;
+            LinkNode<T>* tmp = new LinkNode<T> (currentNode -> element);
+            tmp -> next = reverseLink;
+            reverseLink = tmp;
+        }
+        
+        return reverseLink;
+        
+    };
+    
+    
+    
 }
+
+#endif /* ReverseLinkList_hpp */

@@ -24,18 +24,45 @@
  */
 
 
-#include <iostream>
 
 
+#ifndef InvertBinaryTree_hpp
+#define InvertBinaryTree_hpp
+
+#include <stdio.h>
 
 
-
-using namespace std;
-
-
-
-int main(int argc, const char * argv[]) {
+namespace LWTL {
+    
+    template <typename T>
+    class TreeNode {
+    public:
+        T element;
+        TreeNode<T>* leftChild;
+        TreeNode<T>* rightChild;
+        
+        TreeNode(const T& theElement) : element(theElement) {
+            leftChild = rightChild = NULL;
+        }
+    };
     
     
-    return 0;
+    
+    template<typename T>
+    TreeNode<T>* invertBinaryTree(TreeNode<T>* root) {
+        if (root == NULL) {
+            return NULL;
+        }
+        
+        TreeNode<T>* tmp = root -> leftChild;
+        root -> leftChild = root -> rightChild;
+        root -> rightChild = tmp;
+        
+        invertBinaryTree(root -> leftChild);
+        invertBinaryTree(root -> rightChild);
+        return root;
+    }
+    
 }
+
+#endif /* InvertBinaryTree_hpp */
