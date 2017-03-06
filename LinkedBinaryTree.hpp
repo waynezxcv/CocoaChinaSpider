@@ -136,7 +136,6 @@ namespace LWTL {
     void LinkedBinaryTree<T>::preOrder(BinaryTreeNode<T>* t) {
         if (t != NULL) {
             LinkedBinaryTree<T>::visit(t);//调用函数指针
-            
             preOrder(t -> leftChild);
             preOrder(t -> rightChild);
         }
@@ -166,6 +165,7 @@ namespace LWTL {
     //层序遍历
     template <typename T>
     void LinkedBinaryTree<T>::levelOrder(BinaryTreeNode<T> *t) {
+        
         ArrayQueue<BinaryTreeNode<T> *> q;
         
         while (t != NULL) {

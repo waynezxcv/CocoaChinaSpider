@@ -25,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		0119A3B91E6C8106006B0B27 /* MaxHeap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MaxHeap.hpp; sourceTree = SOURCE_ROOT; };
+		01500D421E6DC551007AFE79 /* HeapSort.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HeapSort.hpp; sourceTree = SOURCE_ROOT; };
+		01500D451E6DC5CE007AFE79 /* BubbleSort.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BubbleSort.hpp; sourceTree = SOURCE_ROOT; };
 		0156641C1E5383F900FE6BE4 /* ArrayList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayList.hpp; sourceTree = SOURCE_ROOT; };
 		017650CE1E531A16004D51DB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
 		017650D01E531A1E004D51DB /* LinearList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearList.hpp; sourceTree = SOURCE_ROOT; };
@@ -117,8 +119,10 @@
 		019837A71E6C08DF0055757C /* PriorytyQueue */ = {
 			isa = PBXGroup;
 			children = (
+				01500D451E6DC5CE007AFE79 /* BubbleSort.hpp */,
 				019837AC1E6C11A00055757C /* MaxPriorityQueue.hpp */,
 				0119A3B91E6C8106006B0B27 /* MaxHeap.hpp */,
+				01500D421E6DC551007AFE79 /* HeapSort.hpp */,
 			);
 			name = PriorytyQueue;
 			sourceTree = "<group>";

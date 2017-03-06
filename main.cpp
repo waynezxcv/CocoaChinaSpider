@@ -26,6 +26,9 @@
 
 #include <iostream>
 #include "MaxPriorityQueue.hpp"
+#include "MaxHeap.hpp"
+#include "BubbleSort.hpp"
+#include "HeapSort.hpp"
 
 
 
@@ -41,8 +44,15 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     
+    int arr [] = {22,12,34,66,1,9,7,5,99,10086,52};
     
+//    LWTL::BubbleSort(arr, sizeof(arr)/sizeof(int));
     
+    LWTL::heapSort(arr, sizeof(arr)/sizeof(int));
+    
+    for (int i = 0; i < sizeof(arr) / sizeof(int);i ++) {
+        printf("%d\n",arr[i]);
+    }
     
     return 0;
 }

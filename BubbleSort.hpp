@@ -27,53 +27,51 @@
 
 
 
-#ifndef MaxPriorityQueue_hpp
-#define MaxPriorityQueue_hpp
+#ifndef BubbleSort_hpp
+#define BubbleSort_hpp
 
 #include <stdio.h>
 
 
-
-/******************** 最大优先级队列 *******************/
-
-//查找和删除元素都是优先级最大的元素
-
-
-/*
- ADT
- 
- 确定队列是否为空
- 确定队列元素个数
- 返回优先级最大的元素
- 删除优先级最大的元素
- 插入元素
- 
- */
-
-
 namespace LWTL {
     
+    
     template <typename T>
+    void swap_1(T* a,T* b) {
+        T tmp = *a;
+        *a = *b;
+        *b = tmp;
+    }
     
-    class MaxPriorityQueue {
-        
-    public:
-        
-        virtual ~MaxPriorityQueue() {};
-        
-        virtual bool empty() const = 0;
-        
-        virtual int size() const = 0;
-        
-        virtual void pop() = 0;
-        
-        virtual void push(const T& theElement) = 0;
-        
-        virtual T& top() const = 0;
-        
-    };
     
+    template <typename T>
+    void swap_2(T* a,T* b) {
+        *a = *a + *b;
+        *b = *a - *b;
+        *a = *a - *b;
+        
+    }
+    
+    template <typename T>
+    void swap_3(T* a,T* b) {
+        *a = *a ^ *b;
+        *b = *a ^ *b;
+        *a = *a ^ *b;
+    }
+    
+    
+    template <typename T>
+    void BubbleSort(T* elements,int size) {
+        for (int i = 0; i < size; i ++) {
+            for (int j = size - 1; j > i; j --) {
+                if (elements[i] > elements[j]) {
+                    swap_3(&elements[i], &elements[j]);
+                }
+            }
+        }
+        
+    }
     
 }
 
-#endif /* MaxPriorityQueue_hpp */
+#endif /* BubbleSort_hpp */
