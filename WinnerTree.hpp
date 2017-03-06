@@ -24,33 +24,11 @@
  */
 
 
-#include <iostream>
-#include "HeapSort.hpp"
-#include "BinarySearch.hpp"
 
 
+#ifndef WinnerTree_hpp
+#define WinnerTree_hpp
 
+#include <stdio.h>
 
-
-
-
-
-
-
-using namespace std;
-
-
-
-int main(int argc, const char * argv[]) {
-    
-    
-    int a [7] = {0, 2, 3, 4, 6, 7, 9};
-    
-    
-    int index = LWTL::binarySearch(a,7,9);
-    
-    printf("the index = %d\n",index);
-    
-    
-    return 0;
-}
+#endif /* WinnerTree_hpp */

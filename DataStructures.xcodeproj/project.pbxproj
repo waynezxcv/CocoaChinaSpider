@@ -27,6 +27,8 @@
 		0119A3B91E6C8106006B0B27 /* MaxHeap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MaxHeap.hpp; sourceTree = SOURCE_ROOT; };
 		01500D421E6DC551007AFE79 /* HeapSort.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HeapSort.hpp; sourceTree = SOURCE_ROOT; };
 		01500D451E6DC5CE007AFE79 /* BubbleSort.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BubbleSort.hpp; sourceTree = SOURCE_ROOT; };
+		01500D481E6DCF02007AFE79 /* WinnerTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WinnerTree.hpp; sourceTree = SOURCE_ROOT; };
+		01500D4B1E6DE2A8007AFE79 /* BinarySearch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinarySearch.hpp; sourceTree = SOURCE_ROOT; };
 		0156641C1E5383F900FE6BE4 /* ArrayList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayList.hpp; sourceTree = SOURCE_ROOT; };
 		017650CE1E531A16004D51DB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
 		017650D01E531A1E004D51DB /* LinearList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearList.hpp; sourceTree = SOURCE_ROOT; };
@@ -107,6 +109,7 @@
 			children = (
 				018821921E6A644B005DC597 /* Dictionary.hpp */,
 				0188219F1E6A9024005DC597 /* PairNode.hpp */,
+				01500D4B1E6DE2A8007AFE79 /* BinarySearch.hpp */,
 				0177E4E61E6B19FF007D638C /* SortedChain.hpp */,
 				0177E4ED1E6B5D41007D638C /* Hash.hpp */,
 				0188219C1E6A6BF6005DC597 /* HashTable.hpp */,
@@ -130,6 +133,7 @@
 		019837A81E6C08EE0055757C /* TournamentTree */ = {
 			isa = PBXGroup;
 			children = (
+				01500D481E6DCF02007AFE79 /* WinnerTree.hpp */,
 			);
 			name = TournamentTree;
 			path = ..;
