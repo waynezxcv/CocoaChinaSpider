@@ -31,20 +31,20 @@
 #include <iostream>
 
 
-/******************** 异常类  *******************/
-
 namespace LWTL {
-
+    
     class IllegalParameterValue {
-
+        
     public:
-
+        
         //构造函数
         IllegalParameterValue() : message("illegal parameter value") {};
         IllegalParameterValue(std::string theMessage) : message(theMessage) {};
-
+        
         //输出错误信息
-        void outputMessage() const;
+        void outputMessage() const {
+            std::cout<<message<<std::endl;
+        }
         
     private:
         std::string message;
