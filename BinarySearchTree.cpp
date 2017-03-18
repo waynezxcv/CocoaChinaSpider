@@ -24,36 +24,4 @@
  */
 
 
-
-#ifndef BinarySearch_hpp
-#define BinarySearch_hpp
-
-#include <stdio.h>
-
-
-namespace LWTL {
-    
-    //在一个有n个元素的数组a中，找到值为x的元素的下标
-    template<class T>
-    int binarySearch(T a[], int n, const T& x) {
-        
-        int low = 0;
-        int high = n - 1;
-        
-        while (low <= high) {
-            
-            int mid = (low + high)/2;
-            
-            if (x < a[mid]) {
-                high = mid - 1;
-            } else if (x > a[mid]) {
-                low = mid + 1;
-            } else {
-                return mid;
-            }
-        }
-        return -1;//没有找到
-    }
-}
-
-#endif /* BinarySearch_hpp */
+#include "BinarySearchTree.hpp"

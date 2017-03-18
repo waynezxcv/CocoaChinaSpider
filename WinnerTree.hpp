@@ -31,4 +31,47 @@
 
 #include <stdio.h>
 
+//为了方便计算机的实现，我们把赢者树限制为完全二叉树。
+//有n个选手的一颗赢者树是一颗完全二叉树，它有n个外部节点和n-1个内部节点，每个内部节点记录在该节点比赛的赢者。
+
+
+/*
+ ADT
+ 
+ 实例：
+ 完全二叉树，每一个节点指向比赛的胜者。外部节点表示参赛者。
+ 
+ 操作：
+ 
+ initialize（a）:为数组a的参赛者初始化为赢者树
+ 
+ winner（）：返回锦标赛的胜者
+ 
+ rePlay（i）：在参赛者i改变之后重赛
+ 
+ */
+
+
+namespace LWTL {
+    
+    template <typename T>
+    class WinnerTree {
+    public:
+        
+        ~WinnerTree () {};
+        
+        //将一个数组初始化为赢者树
+        virtual void initialize (T* thePlayers,int theNumberOfPlayer) = 0;
+        
+        //返回锦标赛的胜者的索引
+        virtual int winner() const = 0;
+        
+        //在参赛者i改变之后重赛
+        virtual void rePlay(int thePlayer) = 0;
+        
+    };
+}
+
+
+
 #endif /* WinnerTree_hpp */

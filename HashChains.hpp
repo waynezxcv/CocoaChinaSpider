@@ -43,7 +43,6 @@
 //链式散列，每一个桶可以容纳无限个记录，没有溢出问题。
 //在起始桶位置放置一个链表
 
-
 namespace LWTL {
     
     template<typename K,typename E>

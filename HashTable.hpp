@@ -46,7 +46,7 @@ namespace LWTL {
     
     //除法散列函数: f(k) = k % D
     
-    //用散列实现的字典
+    //用除法散列函数: f(k) = k % D 实现的字典
     template <typename K,typename E>
     class HashTable : public Dictionary<K, E> {
         
