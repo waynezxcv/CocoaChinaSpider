@@ -158,14 +158,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		019837AA1E6C09310055757C /* BalancedSearchTree */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = BalancedSearchTree;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		B01AF7DC1E519F0400715722 = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +186,6 @@
 				019837A71E6C08DF0055757C /* PriorytyQueue */,
 				019837A81E6C08EE0055757C /* TournamentTree */,
 				019837A91E6C08FD0055757C /* SerachTree */,
-				019837AA1E6C09310055757C /* BalancedSearchTree */,
 				B057234C1E5313AF003B3465 /* Commons */,
 			);
 			path = DataStructures;

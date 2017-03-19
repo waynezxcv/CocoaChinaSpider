@@ -50,8 +50,6 @@ namespace LWTL {
     //3.要删除的元素有两颗子树：先将要删除的元素替换为『左子树的最大值，或者右子树的最小值』 然后把替换元素的节点删除。
     
     
-    
-    
     template <typename T>
     class BSTreeNode {
     public:
