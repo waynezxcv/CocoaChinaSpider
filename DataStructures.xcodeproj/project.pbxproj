@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		017650CF1E531A16004D51DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 017650CE1E531A16004D51DB /* main.cpp */; };
 		01E7DB811E65BAFE00B33ABD /* TowersOfHanoi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01E7DB7F1E65BAFE00B33ABD /* TowersOfHanoi.cpp */; };
-		4215AC7F1E7DB39A00579028 /* BinarySearchTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4215AC7D1E7DB39A00579028 /* BinarySearchTree.cpp */; };
-		4215AC851E7DB3F100579028 /* BSTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4215AC831E7DB3F100579028 /* BSTree.cpp */; };
-		4215AC881E7DB40300579028 /* IndexedBSTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4215AC861E7DB40300579028 /* IndexedBSTree.cpp */; };
-		4215AC8B1E7DB41400579028 /* IndexBinarySearchTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4215AC891E7DB41400579028 /* IndexBinarySearchTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,14 +58,9 @@
 		01E7DB891E65D26400B33ABD /* LinkQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkQueue.hpp; sourceTree = SOURCE_ROOT; };
 		01E7DB8C1E65D31F00B33ABD /* CircularArrayQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircularArrayQueue.hpp; sourceTree = SOURCE_ROOT; };
 		4215AC7B1E7DAB6400579028 /* CompleteWinnerTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CompleteWinnerTree.hpp; sourceTree = SOURCE_ROOT; };
-		4215AC7D1E7DB39A00579028 /* BinarySearchTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinarySearchTree.cpp; sourceTree = SOURCE_ROOT; };
 		4215AC7E1E7DB39A00579028 /* BinarySearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTree.hpp; sourceTree = SOURCE_ROOT; };
-		4215AC831E7DB3F100579028 /* BSTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BSTree.cpp; sourceTree = SOURCE_ROOT; };
 		4215AC841E7DB3F100579028 /* BSTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BSTree.hpp; sourceTree = SOURCE_ROOT; };
-		4215AC861E7DB40300579028 /* IndexedBSTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexedBSTree.cpp; sourceTree = SOURCE_ROOT; };
 		4215AC871E7DB40300579028 /* IndexedBSTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IndexedBSTree.hpp; sourceTree = SOURCE_ROOT; };
-		4215AC891E7DB41400579028 /* IndexBinarySearchTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexBinarySearchTree.cpp; sourceTree = SOURCE_ROOT; };
-		4215AC8A1E7DB41400579028 /* IndexBinarySearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IndexBinarySearchTree.hpp; sourceTree = SOURCE_ROOT; };
 		B01AF7E51E519F0400715722 /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03A56C11E5455E200CEAD85 /* CircularListWithHeader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CircularListWithHeader.hpp; sourceTree = SOURCE_ROOT; };
 		B03A56CA1E545C3000CEAD85 /* ExtendedChain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExtendedChain.hpp; sourceTree = SOURCE_ROOT; };
@@ -159,24 +150,19 @@
 		019837A91E6C08FD0055757C /* SerachTree */ = {
 			isa = PBXGroup;
 			children = (
-				4215AC831E7DB3F100579028 /* BSTree.cpp */,
 				4215AC841E7DB3F100579028 /* BSTree.hpp */,
-				4215AC861E7DB40300579028 /* IndexedBSTree.cpp */,
 				4215AC871E7DB40300579028 /* IndexedBSTree.hpp */,
-				4215AC7D1E7DB39A00579028 /* BinarySearchTree.cpp */,
 				4215AC7E1E7DB39A00579028 /* BinarySearchTree.hpp */,
-				4215AC891E7DB41400579028 /* IndexBinarySearchTree.cpp */,
-				4215AC8A1E7DB41400579028 /* IndexBinarySearchTree.hpp */,
 			);
 			name = SerachTree;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		019837AA1E6C09310055757C /* BalancedTree */ = {
+		019837AA1E6C09310055757C /* BalancedSearchTree */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = BalancedTree;
+			name = BalancedSearchTree;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -208,7 +194,7 @@
 				019837A71E6C08DF0055757C /* PriorytyQueue */,
 				019837A81E6C08EE0055757C /* TournamentTree */,
 				019837A91E6C08FD0055757C /* SerachTree */,
-				019837AA1E6C09310055757C /* BalancedTree */,
+				019837AA1E6C09310055757C /* BalancedSearchTree */,
 				B057234C1E5313AF003B3465 /* Commons */,
 			);
 			path = DataStructures;
@@ -294,12 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4215AC881E7DB40300579028 /* IndexedBSTree.cpp in Sources */,
 				01E7DB811E65BAFE00B33ABD /* TowersOfHanoi.cpp in Sources */,
 				017650CF1E531A16004D51DB /* main.cpp in Sources */,
-				4215AC8B1E7DB41400579028 /* IndexBinarySearchTree.cpp in Sources */,
-				4215AC851E7DB3F100579028 /* BSTree.cpp in Sources */,
-				4215AC7F1E7DB39A00579028 /* BinarySearchTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
