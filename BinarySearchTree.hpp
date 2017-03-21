@@ -201,7 +201,6 @@ namespace LWTL {
                 }
                 
                 //如果要替换的节点p是它的父节点的右子树
-                
                 else {
                     pp -> rightChild = q;
                 }
@@ -220,7 +219,6 @@ namespace LWTL {
             
             
             //2.要删除的节点元素最多有一个孩子(有一个或者没有)
-            
             BSTreeNode<pair<K, E>>* c;
             
             if (p -> leftChild != NULL) {
