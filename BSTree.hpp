@@ -82,7 +82,6 @@ namespace LWTL {
         //判断此二叉搜索树是否为空
         virtual bool empty() const = 0;
         
-        
         //返回此二叉搜索书的元素个数
         virtual int size() const = 0;
         

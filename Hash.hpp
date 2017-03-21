@@ -40,10 +40,10 @@ namespace LWTL {
     
     template <typename K>
     class Hash;
-
     
     
-    //模板特例化
+    
+    //模板特例化,针对某种特定数据类型编写一个模板
     template<>
     class Hash<string> {
     public:
