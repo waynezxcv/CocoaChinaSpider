@@ -24,58 +24,33 @@
  */
 
 
-#include "HeapSort.h"
+
+#include "Matrix.hpp"
 
 
-void swap(int* a,int* b) {
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
-}
-
-
-void heapAdjust(int* a,int begin,int end) {
-    int temp ,j;
+int main(int argc, const char * argv[]) {
     
-    temp = a[begin];
+    //一个不规则二维数组的创建和使用
+    int numberOfRows = 5;
+    //定义每一行的长度
+    int length [5] = {6,3,4,2,7};
     
     
-    //沿着关键字较大的孩子向下筛选,选出最大的放在起始位置
+    /*
+     irregularArray[0] : int[0],int[1],int[2],int[3],int[4],int[5]
+     irregularArray[1] : int[0],int[1],int[2]
+     irregularArray[2] : int[0],int[1],int[2],int[3]
+     irregularArray[3] : int[0],int[1]
+     irregularAraay[4] : int[0],int[1],int[2],int[3],int[4],int[5],int[6]
+     
+     */
     
-    for (j = 2 * begin; j <= end; j *= 2) {
-        
-        //选出孩子中较大的那个
-        if (j < end && a[j] < a[j + 1]) {
-            ++j;
-        }
-        
-        //根节点大于孩子节点,则无需调整
-        if (temp >= a[j]) {
-            break;
-        }
-        
-        //交换目前最大的放在起始位置
-        a[begin] = a[j];
-        begin = j;
+    int** irregularArray = new int* [numberOfRows];
+    
+    for (int i = 0; i < numberOfRows; i ++) {
+        irregularArray[i] = new int [length[i]];
     }
     
     
-    a[begin] = temp;
-}
-
-
-void heapSort(int* a,int length) {
-    
-    int root;
-    
-    //初始化为大根堆,从最后一个有孩子的元素开始,从后往前遍历
-    for (root = length/2; root > 0; root --) {
-        heapAdjust(a,root,length);
-    }
-    
-    //循环将堆顶元素(最大值)跟数组最后的元素交换,然后调整还未交换的元素为大根堆
-    for (root = length; root > 1; root --) {
-        swap(&a[1], &a[root]);
-        heapAdjust(a, 1, root - 1);
-    }
+    return 0;
 }

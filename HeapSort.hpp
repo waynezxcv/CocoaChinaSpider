@@ -36,6 +36,8 @@
 
 namespace LWTL {
     
+    
+    
     //给数组a[1:n]排序
     template <typename T>
     void heapSort(T* a,int n) {

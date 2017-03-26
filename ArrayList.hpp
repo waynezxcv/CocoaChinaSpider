@@ -135,6 +135,7 @@ namespace LWTL {
                 ArrayList<T> tmp (rhs);
                 T* tmpElements = tmp.elements;
                 tmp.elements = elements;
+                
                 elements = tmpElements;
                 arrayLength = tmp.arrayLength;
                 ListSize = tmp.ListSize;

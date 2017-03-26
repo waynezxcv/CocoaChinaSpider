@@ -24,24 +24,58 @@
  */
 
 
-
-#include <stdio.h>
 #include "HeapSort.h"
 
 
+void swap(int* a,int* b) {
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
 
 
-int main(int argc, const char * argv[]) {
-    
-    int arr [] = {0,2,6,1,100,8,1,2,4,5,6};
-    
-    
-    heapSort(arr,10);
-    
-    for (int i = 1; i <= 10; i ++) {
-        printf("%d\n",arr[i]);
+void heapAdjust(int* a,int begin,int end) {
+    int temp ,j;
+
+    temp = a[begin];
+
+
+    //沿着关键字较大的孩子向下筛选,选出最大的放在起始位置
+
+    for (j = 2 * begin; j <= end; j *= 2) {
+
+        //选出孩子中较大的那个
+        if (j < end && a[j] < a[j + 1]) {
+            ++j;
+        }
+
+        //根节点大于孩子节点,则无需调整
+        if (temp >= a[j]) {
+            break;
+        }
+
+        //交换目前最大的放在起始位置
+        a[begin] = a[j];
+        begin = j;
     }
-    
-    
-    return 0;
+
+
+    a[begin] = temp;
+}
+
+
+void heapSort(int* a,int length) {
+
+    int root;
+
+    //初始化为大根堆,从最后一个有孩子的元素开始,从后往前遍历
+    for (root = length/2; root > 0; root --) {
+        heapAdjust(a,root,length);
+    }
+
+    //循环将堆顶元素(最大值)跟数组最后的元素交换,然后调整还未交换的元素为大根堆
+    for (root = length; root > 1; root --) {
+        swap(&a[1], &a[root]);
+        heapAdjust(a, 1, root - 1);
+    }
 }
