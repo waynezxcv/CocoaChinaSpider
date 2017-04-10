@@ -30,7 +30,20 @@
 
 #include <stdio.h>
 
-//堆排序 O(NlogN)
-void heapSort(int* a,int length);
+//冒泡排序
+void BubbleSort(int arr[],int length);
+
+//归并排序
+void MergeSort(int arr[],int temp[],int startIndex,int endIndex);
+
+
+//堆排序
+void HeapSort(int arr[],int length);
+
+
+//快速排序
+void QuickSort(int arr[],int length);
+
+
 
 #endif /* HeapSort_h */
