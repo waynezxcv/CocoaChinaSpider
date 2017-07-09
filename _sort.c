@@ -57,13 +57,11 @@ void Merge(int sourceArr[],int tempArr[],int startIndex,int midIndex ,int endInd
     int k = 0;
     
     while (i <= m && j <= n) {
-        
         if (sourceArr[i] <= sourceArr[j]) {
             tempArr[k++] = sourceArr[i ++];
         } else {
             tempArr[k ++] = sourceArr[j ++];
         }
-        
     }
     
     while (i <= m) {
